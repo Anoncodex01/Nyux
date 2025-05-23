@@ -3,105 +3,164 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { team } from '@/lib/constants';
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from '@/components/ui/breadcrumb';
+import { Home } from 'lucide-react';
+import { useState } from 'react';
+import { ReadyToGetSection } from './ReadyToGetSection';
+
+const clientLogos = [
+  '/logo/Bank_of_Tanzania_Logo.png',
+  '/logo/National_Social_Security_Fund_Tanzania_Logo.png',
+  '/logo/NHC-tanzania-national-housing-corporation-company.webp',
+  '/logo/Azania-Bank-Logos-Landscape.png',
+  '/logo/ATCL_Logo.png',
+  '/logo/tanesco-tanzania-electric-supply-company-limited-logo-png_seeklogo-311615.png',
+];
+
+const tabContent = {
+  mission: {
+    title: 'Our Mission',
+    content: 'Empowering growth through expert advisory solutions.'
+  },
+  vision: {
+    title: 'Our Vision',
+    content: 'To be the most trusted provider of professional advisory services in Tanzania and beyond.'
+  },
+  story: {
+    title: 'Our Story',
+    content: 'Founded by industry veterans, NYUX Consultancy has grown to become a leader in actuarial, tax, financial, and strategic advisory. Our journey is defined by a commitment to excellence, innovation, and client success.'
+  }
+} as const;
+
+type TabKey = keyof typeof tabContent;
 
 export function About() {
+  const [activeTab, setActiveTab] = useState<TabKey>('mission');
+
   return (
-    <section id="about" className="py-20 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.02]" />
-      
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-12 text-center">
-          <motion.span 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-sm font-medium text-blue-600 uppercase tracking-wider mb-2"
-          >
-            About us
-          </motion.span>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
-          >
-            Helping you navigate the world of business
-          </motion.h2>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="max-w-3xl text-center"
-          >
-            <p className="text-gray-700 text-lg leading-relaxed">
-              NYUX Consultancy brings together industry veterans with decades of experience to help businesses thrive in today's complex environment. We're passionate about driving success through data-driven insights, strategic planning, and innovative solutions tailored to your unique needs.
-            </p>
-          </motion.div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* Team section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
-                className="relative group"
-              >
-                <div className="relative overflow-hidden rounded-xl aspect-[3/4] shadow-lg">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="font-bold text-xl mb-1">{member.name}</h3>
-                    <p className="text-blue-200 mb-3">{member.role}</p>
-                    <p className="text-sm text-white/80 line-clamp-3">{member.bio}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+    <>
+      {/* Hero Section */}
+      <section className="relative w-full h-[320px] md:h-[380px] flex flex-col items-center justify-center text-center overflow-hidden mb-12">
+        <img src="/images/hero.webp" alt="About background" className="absolute inset-0 w-full h-full object-cover z-0" />
+        <div className="absolute inset-0 bg-[#1a2236]/90 z-10" />
+        <div className="relative z-20 flex flex-col items-center justify-center h-full w-full">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6">About</h1>
+          <div className="flex justify-center">
+            <Breadcrumb>
+              <BreadcrumbList className="text-white/90 text-base font-medium bg-[#964604]/80 rounded-xl px-6 py-2 shadow-sm backdrop-blur-md">
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/" className="flex items-center gap-1 text-white/90">
+                    <Home className="w-4 h-4 mr-1" /> Home
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator>
+                  <span className="mx-2 text-white/60">/</span>
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-white font-semibold">About</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
           </div>
-
-          {/* Text content */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="max-w-xl"
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Expertise & Approach</h3>
-            <p className="text-gray-700 mb-6">
-              At NYUX, we're passionate about guiding businesses through today's complex challenges. With a team of experienced consultants and a deep-seated commitment to helping you achieve your goals, we're here to simplify the complex.
-            </p>
-            <p className="text-gray-700 mb-8">
-              Whether it's securing your strategic position, planning for growth, or navigating challenging market conditions, we're your trusted partner in making smart business decisions. Our data-driven approach ensures measurable results and sustainable growth.
-            </p>
-            
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-3xl font-bold text-blue-600">96%</p>
-                <p className="text-sm text-gray-700">Client satisfaction</p>
-              </div>
-              <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-3xl font-bold text-blue-600">15+</p>
-                <p className="text-sm text-gray-700">Industries served</p>
+        </div>
+      </section>
+      <section className="relative bg-gradient-to-br from-white via-[#96460408] to-[#95373508] pt-8 pb-16">
+        {/* Background gradient accent */}
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-[#964604]/5 to-transparent rounded-bl-full"></div>
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-[#953735]/5 to-transparent rounded-tr-full"></div>
+        
+        <div className="relative max-w-6xl mx-auto px-4">
+          {/* Headline & Intro */}
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+            <span className="text-gray-900">Get to Know </span>
+            <span className="bg-gradient-to-r from-[#964604] to-[#953735] text-transparent bg-clip-text">NYUX</span>
+          </h1>
+          <p className="text-lg text-gray-700 max-w-3xl mb-10">
+            At NYUX, we believe professional expertise should be a powerful tool — not a barrier. With a passion for innovation and a commitment to excellence, we help businesses and institutions of all sizes navigate the ever-changing landscape. From actuarial and tax strategy to financial and strategic advisory, our team delivers scalable, secure, and data-driven solutions.
+          </p>
+          
+          {/* Image Grid with gradient border */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="relative p-1 rounded-2xl bg-gradient-to-br from-[#964604]/20 to-[#953735]/20">
+              <img src="/images/tax.jpg" alt="NYUX team at work" className="rounded-xl object-cover w-full h-64 md:h-80" />
+            </div>
+            <div className="relative p-1 rounded-2xl bg-gradient-to-br from-[#964604]/20 to-[#953735]/20">
+              <img src="/images/hero.webp" alt="NYUX consulting" className="rounded-xl object-cover w-full h-64 md:h-80" />
+            </div>
+          </div>
+          
+          {/* Client Logos with gradient background */}
+          <div className="relative p-8 rounded-3xl bg-gradient-to-br from-white via-[#96460410] to-[#95373510] mb-16">
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              {clientLogos.map((logo, idx) => (
+                <img key={logo} src={logo} alt={`Client logo ${idx + 1}`} className="h-10 max-w-[160px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              ))}
+            </div>
+          </div>
+          {/* Modern Feature Section */}
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Left: Image with Gradient Overlay */}
+            <div className="flex-1 w-full flex justify-center mb-8 md:mb-0 relative">
+              <div className="relative w-full max-w-xl h-80 md:h-[420px]">
+                <img src="/images/hero.webp" alt="Consulting team" className="rounded-3xl shadow-2xl w-full h-full object-cover" />
+                <div className="absolute inset-0 rounded-3xl" style={{background: 'linear-gradient(135deg, #96460499 0%, #95373599 100%)', mixBlendMode: 'multiply', opacity: 0.55}} />
+                {/* Optional: Floating Accent Shape */}
+                <div className="absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-[#964604]/40 to-[#953735]/30 rounded-full blur-2xl z-10" />
               </div>
             </div>
-            
-            <Button size="lg">Get to know us better</Button>
-          </motion.div>
+            {/* Right: Content with Accent Border */}
+            <div className="flex-1 w-full flex flex-col items-start pl-0 md:pl-8 border-l-0 md:border-l-8 border-[#964604]">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#964604] mb-2">Empowering Business with <span className="text-[#953735]">NYUX</span></h2>
+              <p className="text-gray-700 text-lg mb-6">NYUX Consultancy specializes in delivering smart, scalable, and secure solutions tailored to modern businesses. From actuarial and tax advisory to financial and strategic consulting, we help you grow, optimize, and manage risk.</p>
+              {/* Tabs */}
+              <div className="flex gap-2 mb-4">
+                <button
+                  className={`px-4 py-2 rounded-full font-semibold shadow border transition-colors ${activeTab === 'mission' ? 'bg-[#964604] text-white border-[#964604]' : 'bg-white text-[#964604] border-[#964604]'}`}
+                  onClick={() => setActiveTab('mission')}
+                >
+                  Our Mission
+                </button>
+                <button
+                  className={`px-4 py-2 rounded-full font-semibold shadow border transition-colors ${activeTab === 'vision' ? 'bg-[#964604] text-white border-[#964604]' : 'bg-white text-[#964604] border-[#964604]'}`}
+                  onClick={() => setActiveTab('vision')}
+                >
+                  Our Vision
+                </button>
+                <button
+                  className={`px-4 py-2 rounded-full font-semibold shadow border transition-colors ${activeTab === 'story' ? 'bg-[#964604] text-white border-[#964604]' : 'bg-white text-[#964604] border-[#964604]'}`}
+                  onClick={() => setActiveTab('story')}
+                >
+                  Our Story
+                </button>
+              </div>
+              <div className="bg-[#f7e7d6] rounded-xl p-4 mb-6 w-full max-w-lg">
+                <h3 className="text-lg font-bold text-[#964604] mb-1">{tabContent[activeTab].title}</h3>
+                <p className="text-gray-800">{tabContent[activeTab].content}</p>
+              </div>
+              {/* Stats */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-lg mb-2">
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-[#964604]">96%</div>
+                  <div className="text-gray-700 text-sm">Client satisfaction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-[#964604]">15+</div>
+                  <div className="text-gray-700 text-sm">Industries served</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-[#964604]">+46%</div>
+                  <div className="text-gray-700 text-sm">Accelerate Growth</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-[#964604]">720</div>
+                  <div className="text-gray-700 text-sm">Reduce Costs</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <ReadyToGetSection />
+    </>
   );
 }

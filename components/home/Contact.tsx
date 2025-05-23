@@ -42,7 +42,7 @@ export function Contact() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </button>
             </form>
-          </div>
+                </div>
           {/* Right: Contact Info Card */}
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 w-full max-w-xl mx-auto">
             <div className="grid grid-cols-2 gap-x-4 gap-y-6">
@@ -53,7 +53,7 @@ export function Contact() {
                 +255 764 286 025<br />+255 714 540 331
               </div>
               <div className="font-semibold text-gray-900">Email</div>
-              <div>
+                <div>
                 <a href="mailto:lanyunir@nyuxcompany.com" className="text-blue-600 underline font-medium">lanyunir@nyuxcompany.com</a>
               </div>
               <div className="font-semibold text-gray-900">Office Address</div>
@@ -61,7 +61,7 @@ export function Contact() {
                 Mji Mwema Road, Near Kwa Mwingira Bus Stop<br />P.O. Box 36317, Dar es Salaam, Tanzania
               </div>
             </div>
-          </div>
+            </div>
         </div>
       </div>
     </section>

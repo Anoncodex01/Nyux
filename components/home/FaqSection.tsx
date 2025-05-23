@@ -28,39 +28,60 @@ const faqs = [
 export function FaqSection() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50 via-white to-white">
-      <div className="max-w-2xl mx-auto text-center mb-12">
-        <div className="mb-2 text-xs font-semibold text-green-600 uppercase tracking-wider">Frequently Asked Questions</div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">
-          Everything <span className="text-blue-600">You Need</span> to Know<br />About NYUX Consultancy
-        </h2>
-        <p className="text-gray-500 text-base">
-          Answers to common questions about our services, mission, and how we help your business grow.
-        </p>
-      </div>
-      <div className="max-w-2xl mx-auto space-y-4">
-        {faqs.map((faq, i) => (
-          <div key={faq.q} className="rounded-xl bg-white/80 backdrop-blur-sm shadow-lg border border-gray-100/50 overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <button
-              className="w-full flex items-center justify-between px-6 py-5 text-left text-lg font-medium text-gray-900 focus:outline-none hover:bg-blue-50/50 transition-colors duration-200"
-              onClick={() => setOpen(open === i ? null : i)}
-            >
-              <span>{faq.q}</span>
-              <span className="ml-4">
-                {open === i ? (
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" /></svg>
-                ) : (
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                )}
-              </span>
-            </button>
-            {open === i && (
-              <div className="px-6 pb-5 text-gray-600 text-base border-t border-gray-100/50 animate-fade-in bg-white/50">
-                {faq.a}
-              </div>
-            )}
+    <section className="py-20 bg-[#faf8f6] relative overflow-hidden">
+      {/* Subtle background texture - more visible and unique */}
+      <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true" style={{
+        backgroundImage: 'repeating-radial-gradient(circle, #ecdcc7 1.5px, transparent 2.5px)',
+        backgroundSize: '22px 22px',
+        opacity: 0.7,
+      }} />
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-start px-4 relative z-10">
+        {/* Left: Heading and Description */}
+        <div className="flex-1 flex flex-col justify-center md:pr-12 mb-10 md:mb-0">
+          <div className="mb-3">
+            <span className="inline-block px-4 py-1 rounded-full bg-[#f7e7d6] text-[#964604] font-semibold text-base">FAQ</span>
           </div>
-        ))}
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+            <span className="text-[#222]">Questions You're</span><br />
+            <span className="bg-gradient-to-r from-[#964604] to-[#953735] bg-clip-text text-transparent">Probably Asking</span>
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            If you've made it this far, you're either very interested or have questions. Here are a few frequently asked questions.
+          </p>
+          <div className="mb-2 text-base text-gray-500">Still looking for answers?</div>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center bg-gradient-to-r from-[#964604] to-[#953735] text-white font-semibold rounded-full px-6 py-3 shadow hover:from-[#953735] hover:to-[#964604] transition text-base group w-full md:w-auto"
+          >
+            Speak to Expert
+            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+        {/* Right: FAQ List */}
+        <div className="flex-1 w-full max-w-2xl mx-auto space-y-6">
+          {faqs.map((faq, i) => (
+            <div key={faq.q} className="rounded-2xl bg-white shadow border border-[#f7e7d6] overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <button
+                className="w-full flex items-center justify-between px-8 py-6 text-left text-lg font-semibold text-[#222] focus:outline-none hover:bg-[#f7e7d6]/40 transition-colors duration-200"
+                onClick={() => setOpen(open === i ? null : i)}
+              >
+                <span>{faq.q}</span>
+                <span className="ml-4">
+                  {open === i ? (
+                    <svg className="w-6 h-6 text-[#964604]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" /></svg>
+                  ) : (
+                    <svg className="w-6 h-6 text-[#964604]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#964604" strokeWidth="2" fill="none"/><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v8M8 12h8" /></svg>
+                  )}
+                </span>
+              </button>
+              {open === i && (
+                <div className="px-8 pb-6 text-gray-600 text-base border-t border-[#f7e7d6] animate-fade-in bg-white/70">
+                  {faq.a}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -118,3 +118,15 @@ html {
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-700;
 }
+
+.custom-left-curve-mask {
+  mask-image: radial-gradient(ellipse 120% 100% at 0% 50%, black 100%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 120% 100% at 0% 50%, black 100%, transparent 100%);
+}
+
+.about-ellipse-right {
+  clip-path: ellipse(60% 100% at 100% 50%);
+}
+.about-ellipse-left {
+  clip-path: ellipse(60% 100% at 0% 50%);
+}
