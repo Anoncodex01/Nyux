@@ -34,7 +34,7 @@ export function Navbar() {
         </Link>
         {/* Nav Links - Desktop */}
         <nav className="hidden md:flex gap-6 items-center text-sm font-medium text-black relative">
-          <Link href="#home" className="hover:text-[#953735]">Home</Link>
+          <Link href="/" className="hover:text-[#953735]">Home</Link>
           <Link href="/about" className="hover:text-[#953735]">About</Link>
           {/* Services Dropdown */}
           <div
@@ -66,8 +66,7 @@ export function Navbar() {
               </div>
             )}
           </div>
-          <Link href="#faq" className="hover:text-[#953735]">FAQ</Link>
-          <Link href="#contact" className="hover:text-[#953735]">Contact Us</Link>
+          <Link href="/contact" className="hover:text-[#953735]">Contact Us</Link>
         </nav>
         {/* Hamburger - Mobile */}
         <button
@@ -92,11 +91,10 @@ export function Navbar() {
             <button className="self-end mb-8" onClick={() => setOpen(false)} aria-label="Close menu">
               <X size={28} />
             </button>
-            <Link href="#home" className="hover:text-[#964604]" onClick={() => setOpen(false)}>Home</Link>
+            <Link href="/" className="hover:text-[#964604]" onClick={() => setOpen(false)}>Home</Link>
             <Link href="/about" className="hover:text-[#964604]" onClick={() => setOpen(false)}>About</Link>
             <Link href="#services" className="hover:text-[#964604]" onClick={() => setOpen(false)}>Our Services</Link>
-            <Link href="#faq" className="hover:text-[#964604]" onClick={() => setOpen(false)}>FAQ</Link>
-            <Link href="#contact" className="hover:text-[#964604]" onClick={() => setOpen(false)}>Contact Us</Link>
+            <Link href="/contact" className="hover:text-[#964604]" onClick={() => setOpen(false)}>Contact Us</Link>
             <button className="mt-8 bg-gradient-to-r from-[#964604] to-[#953735] text-white font-semibold rounded-full px-6 py-2 shadow hover:from-[#953735] hover:to-[#964604] transition text-base">Get in Touch</button>
           </nav>
         </div>
