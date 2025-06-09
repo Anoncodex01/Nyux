@@ -5,34 +5,34 @@ import { Briefcase, FileBarChart, Scale, Users, BarChart2, Settings, ShieldCheck
 
 const services = [
   {
-    title: 'Business Strategy & Planning',
-    icon: Briefcase,
-    description: 'Strategic business model development, operational planning, and market entry solutions to drive sustainable growth.',
+    title: 'Advisory Service',
+    icon: Users,
+    description: 'Project Management and Evaluation, Risk Management and Compliance, Marketing Advisory, Human Capital Advisory, Investment Advisory, Sustainability & ESG Advisory.',
   },
   {
-    title: 'Risk Management & Compliance',
-    icon: ShieldCheck,
-    description: 'Enterprise risk frameworks, regulatory compliance, internal controls, and forensic audit for robust governance.',
-  },
-  {
-    title: 'Tax Advisory & Planning',
+    title: 'Tax Service',
     icon: Scale,
-    description: 'Comprehensive tax planning, transaction advice, and corporate tax optimization for individuals and businesses.',
+    description: 'Compliance and Filing, Health Checks and Audits, Representation and Dispute Resolution, Tax planning & Transfer pricing documentation.',
   },
   {
-    title: 'Tax Compliance & Filing',
-    icon: FileBarChart,
-    description: 'Preparation and filing of tax returns, VAT, PAYE, and statutory filings to ensure full regulatory compliance.',
-  },
-  {
-    title: 'Pension & Benefits Valuation',
+    title: 'Actuarial Service',
     icon: BarChart2,
-    description: 'Actuarial valuation of pension schemes, employee benefits, and compliance with IAS 19 and IPSAS 39 standards.',
+    description: 'Employee Benefits Advisory, Pension and Insurance, Risk Modeling, Data Analytics, Investment & Asset-Liability Management.',
   },
   {
-    title: 'Insurance & Risk Modelling',
+    title: 'Business Strategy and Planning',
+    icon: Briefcase,
+    description: 'Development and Implementation of Strategic plan, Business model development and review, Strategic and operational planning, Market entry and expansion strategies, Organizational restructuring, Impact Analysis.',
+  },
+  {
+    title: 'Accounts and Financial Advisory',
+    icon: FileBarChart,
+    description: 'Business valuations Services, Investment analysis and feasibility studies, Capital structuring and fundraising support, Financial planning and forecasting, Technical accounting advice.',
+  },
+  {
+    title: 'Digital Transformation & Technology Advisory',
     icon: Settings,
-    description: 'Insurance product pricing, reserving, claims analysis, and solvency modeling for risk mitigation.',
+    description: 'IT Strategy & Digital Roadmaps, Fintech & AI Solutions, ERP & Financial Systems Implementation, Cybersecurity & Data Protection – Risk assessments and compliance (Eg: GDPR, ISO 27001).',
   },
 ];
 

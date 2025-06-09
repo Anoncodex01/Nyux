@@ -50,11 +50,11 @@ export function Contact() {
               <div className="font-semibold text-gray-900 flex items-center gap-2"><User className="w-5 h-5 text-blue-600" />Lanyuni Robert</div>
               <div className="font-semibold text-gray-900">Phone</div>
               <div className="text-gray-700">
-                +255 764 286 025<br />+255 714 540 331
+                +255 714 540 331
               </div>
               <div className="font-semibold text-gray-900">Email</div>
                 <div>
-                <a href="mailto:lanyunir@nyuxcompany.com" className="text-blue-600 underline font-medium">lanyunir@nyuxcompany.com</a>
+                <a href="mailto:Info@nyux.co.tz" className="text-blue-600 underline font-medium">Info@nyux.co.tz</a>
               </div>
               <div className="font-semibold text-gray-900">Office Address</div>
               <div className="text-gray-700">

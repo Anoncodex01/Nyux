@@ -66,8 +66,12 @@ export function Hero() {
             Trusted consulting in Actuarial, Tax, Financial, and Strategic Advisory services.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Button className="bg-[#964604] text-white rounded-xl px-6 py-3 text-lg shadow hover:bg-[#953735]">Request Quote</Button>
-            <Button variant="outline" className="rounded-xl px-6 py-3 text-lg border-[#964604] text-[#964604] hover:bg-[#f7e7d6]">Get in Touch</Button>
+            <a href="mailto:info@nyux.co.tz">
+              <Button className="bg-[#964604] text-white rounded-xl px-6 py-3 text-lg shadow hover:bg-[#953735]">Request Quote</Button>
+            </a>
+            <a href="/contact">
+              <Button variant="outline" className="rounded-xl px-6 py-3 text-lg border-[#964604] text-[#964604] hover:bg-[#f7e7d6]">Get in Touch</Button>
+            </a>
           </div>
         </motion.div>
       </div>

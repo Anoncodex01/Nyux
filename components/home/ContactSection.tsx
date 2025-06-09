@@ -41,9 +41,6 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-gray-900">Phone</h3>
                   <p className="text-gray-700">
-                    <Link href="tel:+255764286025" className="hover:text-blue-600">+255 764 286 025</Link>
-                  </p>
-                  <p className="text-gray-700">
                     <Link href="tel:+255714540331" className="hover:text-blue-600">+255 714 540 331</Link>
                   </p>
                 </div>
@@ -57,13 +54,8 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-gray-900">Email</h3>
                   <p className="text-gray-700">
-                    <Link href="mailto:lanyunir@nyuxcompany.com" className="hover:text-blue-600">
-                      lanyunir@nyuxcompany.com
-                    </Link>
-                  </p>
-                  <p className="text-gray-700">
-                    <Link href="mailto:lanyunir@gmail.com" className="hover:text-blue-600">
-                      lanyunir@gmail.com
+                    <Link href="mailto:Info@nyux.co.tz" className="hover:text-blue-600">
+                      Info@nyux.co.tz
                     </Link>
                   </p>
                 </div>

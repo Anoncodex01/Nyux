@@ -27,22 +27,18 @@ export function Footer() {
           <div>
             <div className="font-semibold text-gray-900 mb-3">Services</div>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Advisory</a></li>
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Actuarial</a></li>
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Tax</a></li>
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Risk Management</a></li>
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Financial Planning</a></li>
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Compliance</a></li>
+              <li><Link href="/services/advisory/BusinessStrategyAndPlanning" className="hover:text-[#964604] transition-colors">Advisory</Link></li>
+              <li><Link href="/services/actuarial/EmployeeBenefitsAdvisory" className="hover:text-[#964604] transition-colors">Actuarial</Link></li>
+              <li><Link href="/services/tax/TaxAdvisoryServices" className="hover:text-[#964604] transition-colors">Tax</Link></li>
+              <li><Link href="/services/advisory/RiskManagementAndCompliance" className="hover:text-[#964604] transition-colors">Risk Management</Link></li>
             </ul>
           </div>
           <div>
             <div className="font-semibold text-gray-900 mb-3">Information</div>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#964604] transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Team</a></li>
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-[#964604] transition-colors">Blog</a></li>
+              <li><Link href="/" className="hover:text-[#964604] transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#964604] transition-colors">About</Link></li>
+              <li><Link href="/contact" className="hover:text-[#964604] transition-colors">Contact Us</Link></li>
             </ul>
           </div>
           <div>

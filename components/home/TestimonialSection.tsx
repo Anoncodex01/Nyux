@@ -4,22 +4,19 @@ import { useState, useEffect } from 'react';
 
 const testimonials = [
   {
-    name: 'David Leonard',
-    title: 'CEO, BOT',
+    company: 'Bank of Tanzania',
     avatar: '/logo/bank_of_tanzania_Logo.png',
     quote:
       'NYUX transformed our entire financial strategy. Their team was professional, fast, and incredibly knowledgeable. We saw immediate performance gains and a reduction in risk. Highly recommended!',
   },
   {
-    name: 'Sarah Johnson',
-    title: 'CFO, Azania Bank',
+    company: 'Azania Bank',
     avatar: '/logo/Azania-Bank-Logo-Landscape.png',
     quote:
       'The actuarial and tax advisory services from NYUX have been invaluable. Their insights helped us optimize our benefits and compliance. Truly a trusted partner!',
   },
   {
-    name: 'Michael Lee',
-    title: 'Director, NHC',
+    company: 'NHC',
     avatar: '/logo/NHC-tanzania-national-housing-corporation-company.webp',
     quote:
       'We rely on NYUX for risk management and financial planning. Their expertise and dedication have made a measurable difference in our operations.',
@@ -52,13 +49,13 @@ export function TestimonialSection() {
         <div className="flex justify-center items-center gap-2 mb-8 transition-all duration-500">
           {testimonials.map((t, i) => (
             <div
-              key={t.name}
+              key={t.company}
               className={`rounded-full border-4 border-white shadow bg-white transition-all duration-500 ${i === current ? 'scale-110 z-10' : 'opacity-60'} ${Math.abs(i - current) > 2 ? 'hidden md:block' : ''}`}
               style={{ width: i === current ? 72 : 56, height: i === current ? 72 : 56 }}
             >
               <Image
                 src={t.avatar}
-                alt={t.name}
+                alt={t.company}
                 width={i === current ? 72 : 56}
                 height={i === current ? 72 : 56}
                 className="object-cover rounded-full"
@@ -86,9 +83,7 @@ export function TestimonialSection() {
           </button>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-gray-700 text-base">
-          <span className="font-bold text-lg">{testimonials[current].name}</span>
-          <span className="hidden md:inline-block mx-2 text-gray-300">|</span>
-          <span className="text-gray-500">{testimonials[current].title}</span>
+          <span className="font-bold text-lg">{testimonials[current].company}</span>
         </div>
       </div>
     </section>

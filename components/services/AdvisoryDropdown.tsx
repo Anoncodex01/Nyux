@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const advisoryItems = [
   { label: 'Business Strategy and Planning', href: '/services/advisory/BusinessStrategyAndPlanning' },
-  { label: 'Financial Advisory', href: '/services/advisory/FinancialAdvisory' },
+  { label: 'Accounting and Financial Advisory', href: '/services/advisory/FinancialAdvisory' },
   { label: 'Risk Management and Compliance', href: '/services/advisory/RiskManagementAndCompliance' },
   { label: 'Project Management and Evaluation', href: '/services/advisory/ProjectManagementAndEvaluation' },
   { label: 'Human Capital Advisory', href: '/services/advisory/HumanCapitalAdvisory' },

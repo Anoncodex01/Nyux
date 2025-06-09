@@ -106,7 +106,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone Number</h3>
-                    <p className="text-gray-600">+255 764 286 025<br />+255 714 540 331</p>
+                    <p className="text-gray-600">+255 714 540 331</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -115,7 +115,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email Address</h3>
-                    <p className="text-gray-600">lanyunir@nyuxcompany.com</p>
+                    <p className="text-gray-600">Info@nyux.co.tz</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -154,7 +154,7 @@ export default function Contact() {
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Ready to transform your organization? Let's talk.</h2>
           <div className="flex flex-col md:flex-row gap-4 mt-4">
             <a href="/contact" className="bg-white text-[#964604] font-semibold rounded-full px-8 py-3 shadow hover:bg-[#f7e7d6] transition text-lg">Contact Us</a>
-            <a href="/contact?type=proposal" className="bg-[#953735] text-white font-semibold rounded-full px-8 py-3 shadow hover:bg-[#964604] transition text-lg">Request a Proposal</a>
+            <a href="/contact?type=proposal" className="bg-[#953735] text-white font-semibold rounded-full px-8 py-3 shadow hover:bg-[#964604] transition text-lg">Request a quote</a>
           </div>
         </div>
       </section>
