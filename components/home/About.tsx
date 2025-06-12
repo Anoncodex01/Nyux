@@ -175,7 +175,7 @@ export function About() {
             </div>
             <div className="bg-[#f7e7d6] rounded-2xl shadow p-6 flex items-center">
               <span className="text-2xl mr-4">🏛️</span>
-              <span className="text-lg font-medium text-gray-800">Government & Public Sector</span>
+              <span className="text-lg font-medium text-gray-800">Government & NGO's</span>
             </div>
             <div className="bg-[#f7e7d6] rounded-2xl shadow p-6 flex items-center">
               <span className="text-2xl mr-4">📡</span>

@@ -25,15 +25,6 @@ export function Footer() {
         {/* Center: Product, Resources, Company */}
         <div className="flex-[2] grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 mt-8 md:mt-0">
           <div>
-            <div className="font-semibold text-gray-900 mb-3">Services</div>
-            <ul className="space-y-2">
-              <li><Link href="/services/advisory/BusinessStrategyAndPlanning" className="hover:text-[#964604] transition-colors">Advisory</Link></li>
-              <li><Link href="/services/actuarial/EmployeeBenefitsAdvisory" className="hover:text-[#964604] transition-colors">Actuarial</Link></li>
-              <li><Link href="/services/tax/TaxAdvisoryServices" className="hover:text-[#964604] transition-colors">Tax</Link></li>
-              <li><Link href="/services/advisory/RiskManagementAndCompliance" className="hover:text-[#964604] transition-colors">Risk Management</Link></li>
-            </ul>
-          </div>
-          <div>
             <div className="font-semibold text-gray-900 mb-3">Information</div>
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-[#964604] transition-colors">Home</Link></li>
