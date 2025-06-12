@@ -24,7 +24,7 @@ export function Hero() {
   if (!mounted) return null;
 
   return (
-    <section className="relative overflow-hidden flex items-center justify-center min-h-screen w-full">
+    <section className="relative overflow-hidden overflow-x-hidden flex items-center justify-center min-h-screen w-full max-w-full">
       {/* Video Background */}
       <video
         src="/video/Royalty.mp4"
@@ -48,29 +48,29 @@ export function Hero() {
         }}
       />
       {/* Centered Content */}
-      <div className="relative z-30 flex flex-col items-center justify-center w-full px-4 text-center">
+      <div className="relative z-30 flex flex-col items-center justify-center w-full px-2 sm:px-4 text-center">
         <motion.div
-          className="max-w-3xl mx-auto flex flex-col items-center"
+          className="w-full max-w-xs sm:max-w-3xl mx-auto flex flex-col items-center"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <span className="inline-block mb-4 px-4 py-1 bg-[#f7e7d6]/80 rounded-full text-[#953735] font-semibold shadow">
+          <span className="inline-block mb-4 px-4 py-1 bg-[#f7e7d6]/80 rounded-full text-[#953735] font-semibold shadow text-sm sm:text-base">
             Your Smart Advisory Partner
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            <span className="whitespace-nowrap">Expert Advisory Services</span><br />
+          <h1 className="text-2xl sm:text-6xl font-bold text-white mb-4 leading-tight break-words sm:whitespace-nowrap">
+            Expert Advisory Services<br className="hidden sm:block" />
             for a Stronger Future
           </h1>
-          <p className="text-lg text-white mb-8 max-w-xl">
+          <p className="text-base sm:text-lg text-white mb-8 max-w-xs sm:max-w-xl">
             Trusted consulting in Actuarial, Tax, Financial, and Strategic Advisory services.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <a href="mailto:info@nyux.co.tz">
-              <Button className="bg-[#964604] text-white rounded-xl px-6 py-3 text-lg shadow hover:bg-[#953735]">Request Quote</Button>
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mb-8 w-full sm:w-auto">
+            <a href="mailto:info@nyux.co.tz" className="w-full sm:w-auto">
+              <Button className="w-full sm:w-auto bg-[#964604] text-white rounded-xl px-6 py-3 text-base sm:text-lg shadow hover:bg-[#953735]">Request Quote</Button>
             </a>
-            <a href="/contact">
-              <Button variant="outline" className="rounded-xl px-6 py-3 text-lg border-[#964604] text-[#964604] hover:bg-[#f7e7d6]">Get in Touch</Button>
+            <a href="/contact" className="w-full sm:w-auto">
+              <Button variant="outline" className="w-full sm:w-auto rounded-xl px-6 py-3 text-base sm:text-lg border-[#964604] text-[#964604] hover:bg-[#f7e7d6]">Get in Touch</Button>
             </a>
           </div>
         </motion.div>
