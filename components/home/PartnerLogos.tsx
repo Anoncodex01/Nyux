@@ -19,6 +19,7 @@ const logos = [
   '/logo/mnh_logo.png',
   '/logo/social-action-trust-fund-satf-231780.jpg',
   '/logo/tanesco-tanzania-electric-supply-company-limited-logo-png_seeklogo-311615.png',
+  '/logo/silabu.png',
 ];
 
 export function PartnerLogos() {

@@ -28,7 +28,7 @@ const faqs = [
 export function FaqSection() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section className="py-20 bg-[#faf8f6] relative overflow-hidden">
+    <section id="faq" className="py-20 bg-[#faf8f6] relative overflow-hidden">
       {/* Subtle background texture - more visible and unique */}
       <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true" style={{
         backgroundImage: 'repeating-radial-gradient(circle, #ecdcc7 1.5px, transparent 2.5px)',

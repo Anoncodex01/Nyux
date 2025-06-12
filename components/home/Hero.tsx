@@ -59,8 +59,8 @@ export function Hero() {
             Your Smart Advisory Partner
           </span>
           <h1 className="text-2xl sm:text-6xl font-bold text-white mb-4 leading-tight break-words sm:whitespace-nowrap">
-            Expert Advisory Services<br className="hidden sm:block" />
-            for a Stronger Future
+            <span>Expert Advisory Services </span><br className="hidden sm:block" />
+            <span>for a Stronger Future</span>
           </h1>
           <p className="text-base sm:text-lg text-white mb-8 max-w-xs sm:max-w-xl">
             Trusted consulting in Actuarial, Tax, Financial, and Strategic Advisory services.

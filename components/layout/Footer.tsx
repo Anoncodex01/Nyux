@@ -35,7 +35,7 @@ export function Footer() {
           <div>
             <div className="font-semibold text-gray-900 mb-3">Resources</div>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#964604] transition-colors">FAQs</a></li>
+              <li><a href="/#faq" className="hover:text-[#964604] transition-colors">FAQs</a></li>
               <li><a href="#" className="hover:text-[#964604] transition-colors">Documentation</a></li>
               <li><a href="#" className="hover:text-[#964604] transition-colors">Support</a></li>
               <li><a href="#" className="hover:text-[#964604] transition-colors">Privacy Policy</a></li>
