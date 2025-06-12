@@ -48,7 +48,7 @@ export function AboutPreview() {
               </div>
             ))}
           </div>
-          <button className="bg-[#964604] text-white font-semibold rounded-full px-8 py-4 shadow hover:bg-[#953735] transition text-lg">Read More</button>
+          <a href="/about" className="bg-[#964604] text-white font-semibold rounded-full px-8 py-4 shadow hover:bg-[#953735] transition text-lg">Read More</a>
         </motion.div>
         {/* Right: Image Placeholder */}
         <motion.div

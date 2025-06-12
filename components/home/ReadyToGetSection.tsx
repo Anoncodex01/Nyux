@@ -10,7 +10,7 @@ export function ReadyToGetSection() {
             Discover how our expert advisory, actuarial, and tax services can empower your business to grow, optimize performance, and manage risk. Book a consultation with NYUX Consultancy today.
           </p>
           <a
-            href="#contact"
+            href="/contact"
             className="inline-block px-8 py-3 rounded-full bg-white text-[#964604] font-semibold shadow hover:bg-[#f7e7d6] hover:text-[#953735] transition text-lg mb-4"
           >
             Book a Consultation

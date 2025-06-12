@@ -154,7 +154,7 @@ export default function Contact() {
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Ready to transform your organization? Let's talk.</h2>
           <div className="flex flex-col md:flex-row gap-4 mt-4">
             <a href="/contact" className="bg-white text-[#964604] font-semibold rounded-full px-8 py-3 shadow hover:bg-[#f7e7d6] transition text-lg">Contact Us</a>
-            <a href="/contact?type=proposal" className="bg-[#953735] text-white font-semibold rounded-full px-8 py-3 shadow hover:bg-[#964604] transition text-lg">Request a quote</a>
+            <a href="mailto:Info@nyux.co.tz" className="bg-[#953735] text-white font-semibold rounded-full px-8 py-3 shadow hover:bg-[#964604] transition text-lg">Request a quote</a>
           </div>
         </div>
       </section>

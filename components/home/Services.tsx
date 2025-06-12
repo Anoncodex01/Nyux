@@ -69,7 +69,7 @@ export function Services() {
                 {service.description}
               </p>
               <a
-                href="#"
+                href="mailto:Info@nyux.co.tz"
                 className="inline-block bg-[#964604] text-white font-semibold rounded-full px-6 py-3 shadow hover:bg-[#953735] transition text-base text-center"
               >
                 Learn More

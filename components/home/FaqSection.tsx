@@ -50,7 +50,7 @@ export function FaqSection() {
           </p>
           <div className="mb-2 text-base text-gray-500">Still looking for answers?</div>
           <a
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center justify-center bg-gradient-to-r from-[#964604] to-[#953735] text-white font-semibold rounded-full px-6 py-3 shadow hover:from-[#953735] hover:to-[#964604] transition text-base group w-full md:w-auto"
           >
             Speak to Expert

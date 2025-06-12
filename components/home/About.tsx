@@ -160,6 +160,38 @@ export function About() {
           </div>
         </div>
       </section>
+      {/* Industries We Serve Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-8 text-[#964604]">Industries We Serve</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+            <div className="bg-[#f7e7d6] rounded-2xl shadow p-6 flex items-center">
+              <span className="text-2xl mr-4">💼</span>
+              <span className="text-lg font-medium text-gray-800">Financial Services (Banking, Insurance, Pensions)</span>
+            </div>
+            <div className="bg-[#f7e7d6] rounded-2xl shadow p-6 flex items-center">
+              <span className="text-2xl mr-4">⛽</span>
+              <span className="text-lg font-medium text-gray-800">Energy & Natural Resources (Oil, Gas, Utilities)</span>
+            </div>
+            <div className="bg-[#f7e7d6] rounded-2xl shadow p-6 flex items-center">
+              <span className="text-2xl mr-4">🏛️</span>
+              <span className="text-lg font-medium text-gray-800">Government & Public Sector</span>
+            </div>
+            <div className="bg-[#f7e7d6] rounded-2xl shadow p-6 flex items-center">
+              <span className="text-2xl mr-4">📡</span>
+              <span className="text-lg font-medium text-gray-800">Telecommunications & Technology</span>
+            </div>
+            <div className="bg-[#f7e7d6] rounded-2xl shadow p-6 flex items-center">
+              <span className="text-2xl mr-4">🏥</span>
+              <span className="text-lg font-medium text-gray-800">Education, Agriculture & Healthcare</span>
+            </div>
+            <div className="bg-[#f7e7d6] rounded-2xl shadow p-6 flex items-center">
+              <span className="text-2xl mr-4">🏢</span>
+              <span className="text-lg font-medium text-gray-800">Real Estate & Manufacturing</span>
+            </div>
+          </div>
+        </div>
+      </section>
       <ReadyToGetSection />
     </>
   );
