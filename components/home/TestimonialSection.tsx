@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const testimonials = [
   {
     company: 'Bank of Tanzania',
-    avatar: '/logo/bank_of_tanzania_Logo.png',
+    avatar: '/logo/Bank_of_Tanzania_Logo.png',
     quote:
       'NYUX team was professional, fast, and incredibly knowledgeable. We saw immediate performance gains and a reduction in risk from their advisory services. Highly recommended!',
   },
