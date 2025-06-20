@@ -10,6 +10,18 @@ const testimonials = [
       'NYUX team was professional, fast, and incredibly knowledgeable. We saw immediate performance gains and a reduction in risk from their advisory services. Highly recommended!',
   },
   {
+    company: 'Azania Bank',
+    avatar: '/logo/Azania-Bank-Logo-Landscape.png',
+    quote:
+      'The actuarial and tax advisory services from NYUX have been invaluable. Their insights helped us optimize our benefits and compliance. Truly a trusted partner!',
+  },
+  {
+    company: 'NHC',
+    avatar: '/logo/NHC-tanzania-national-housing-corporation-company.webp',
+    quote:
+      'We rely on NYUX for risk management and financial planning. Their expertise and dedication have made a measurable difference in our operations.',
+  },
+  {
     company: 'TANESCO',
     avatar: '/logo/tanesco-tanzania-electric-supply-company-limited-logo-png_seeklogo-311615.png',
     quote:
