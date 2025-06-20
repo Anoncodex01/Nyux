@@ -7,19 +7,19 @@ const testimonials = [
     company: 'Bank of Tanzania',
     avatar: '/logo/bank_of_tanzania_Logo.png',
     quote:
-      'NYUX transformed our entire financial strategy. Their team was professional, fast, and incredibly knowledgeable. We saw immediate performance gains and a reduction in risk. Highly recommended!',
+      'NYUX team was professional, fast, and incredibly knowledgeable. We saw immediate performance gains and a reduction in risk from their advisory services. Highly recommended!',
   },
   {
-    company: 'Azania Bank',
-    avatar: '/logo/Azania-Bank-Logo-Landscape.png',
+    company: 'TANESCO',
+    avatar: '/logo/tanesco-tanzania-electric-supply-company-limited-logo-png_seeklogo-311615.png',
     quote:
-      'The actuarial and tax advisory services from NYUX have been invaluable. Their insights helped us optimize our benefits and compliance. Truly a trusted partner!',
+      'Accurate and insightful business valuation that gave us clarity, confidence, and the true worth of our investees',
   },
   {
-    company: 'NHC',
-    avatar: '/logo/NHC-tanzania-national-housing-corporation-company.webp',
+    company: 'National Insurance Corporation',
+    avatar: '/logo/logo.png', // Placeholder - can be updated when actual logo is available
     quote:
-      'We rely on NYUX for risk management and financial planning. Their expertise and dedication have made a measurable difference in our operations.',
+      'We are grateful for their professional execution of the Customer Satisfaction Survey, which provided us with valuable feedback to improve our services and strengthen client relationships.',
   },
 ];
 
